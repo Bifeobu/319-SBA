@@ -12,3 +12,6 @@ const commentSchema = new Schema({
         required: true
     }
 })
+
+//model to control this collection
+const Comment = model("Comment", commentSchema);
