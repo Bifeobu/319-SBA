@@ -23,4 +23,4 @@ const postSchema = new Schema({
 //model to control this collection
 const Post = model("Post", postSchema);
 
-module.exports = Post
+module.exports = Post;

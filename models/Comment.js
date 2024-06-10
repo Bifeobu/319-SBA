@@ -16,4 +16,4 @@ const commentSchema = new Schema({
 //model to control this collection
 const Comment = model("Comment", commentSchema);
 
-module.exports = Comment
+module.exports = Comment;
