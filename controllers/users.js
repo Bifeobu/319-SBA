@@ -50,3 +50,14 @@ async function patchUser(req, res) {
     res.status(400).send(error);
   }
 }
+
+//delete request function for single user by ID 
+async function deleteUser(req, res) {
+  try {
+    const user = await user.findByIdAndDelete(req.params.id).exec()
+
+    res.status(200).json(deleteUser);
+  } catch (err) {
+    res.status(400).send(error);
+  }
+}
