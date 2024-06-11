@@ -5,11 +5,11 @@ const { Schema, model } = require('mongoose');
 const commentSchema = new Schema({
     content: {
         type: String,
+        required: true,
         max: 500
     },
     author: {
-        type: String,
-        required: true
+        type: String
     }
 })
 
