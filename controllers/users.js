@@ -38,3 +38,14 @@ async function getUser(req, res) {
     res.status(400).send(error);
   }
 }
+
+//update request function for single user by ID
+async function patchUser(req, res) {
+  try {
+    const user = await user.findByIdAndUpdate(req.params.id, req.body, {new: true,}).exec()
+
+    res.status(200).json(updateUser);
+  } catch (err) {
+    res.status(400).send(error);
+  }
+}
