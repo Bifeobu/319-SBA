@@ -2,7 +2,8 @@ const User = require('../models/User');
 
 module.exports = {
   createUser,
-  getUsers
+  getUsers,
+  getUser
 };
 
 //post request function for user
