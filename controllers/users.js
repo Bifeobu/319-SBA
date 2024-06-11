@@ -3,7 +3,8 @@ const User = require('../models/User');
 module.exports = {
   createUser,
   getUsers,
-  getUser
+  getUser,
+  patchUser
 };
 
 //post request function for user
