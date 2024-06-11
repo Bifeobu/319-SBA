@@ -120,7 +120,7 @@ const posts = [
         content: "Eyes",
         author: "Roddy Brick$"
     },
-]
+];
 
 const comments = [
     {
@@ -143,4 +143,32 @@ const comments = [
         content: "I also like Steak, Shrimp, and Catfish",
         author: "Gavra*B"
     },
-]
+];
+
+async function seed() {
+    try {
+      //delete previous existing data  
+      await User.deleteMany({});
+      await Post.deleteMany({});
+      await Comment.deleteMany({});
+      
+      //create users data in database
+      const createdUsers = await User.create(users);
+      console.log('Users: ', createdUsers);
+  
+      //create posts data in database
+      const createdPosts = await Post.create(posts);
+      console.log('Posts: ', createdPosts);
+  
+      //create comments data in database
+      const createdComments = await Comment.create(comments);
+      console.log('Comments: ', createdComments);
+  
+      //ends mongoose connection
+      await mongoose.connection.close();
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  
+  seed();
