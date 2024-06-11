@@ -18,7 +18,7 @@ const userSchema = Schema({
     type: String,
     required: true,
     unique: true,
-    min: 5,
+    min: [5, `Must be at least 6 characters long, you only have {VALUE} characters`]
   },
 });
 
