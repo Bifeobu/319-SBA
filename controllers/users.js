@@ -4,7 +4,8 @@ module.exports = {
   createUser,
   getUsers,
   getUser,
-  patchUser
+  patchUser,
+  deleteUser
 };
 
 //post request function for user
