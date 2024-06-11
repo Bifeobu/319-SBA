@@ -5,6 +5,7 @@ module.exports = {
   getUsers
 };
 
+//post request function for user
 async function createUser(req, res) {
   try {
     const user = await User.create(req.body);
@@ -15,6 +16,7 @@ async function createUser(req, res) {
   }
 }
 
+//get request funtion for users
 async function getUsers(req, res) {
   try {
     const users = await User.find({});
