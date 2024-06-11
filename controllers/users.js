@@ -13,3 +13,13 @@ async function createUser(req, res) {
     res.status(400).json('No Beuno:(');
   }
 }
+
+async function getUsers(req, res) {
+  try {
+    const users = await User.find({});
+
+    res.status(200).json(users);
+  } catch (err) {
+    res.status(400).send(err);
+  }
+}
