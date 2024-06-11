@@ -121,3 +121,26 @@ const posts = [
         author: "Roddy Brick$"
     },
 ]
+
+const comments = [
+    {
+        content: "I also like R&B, Jazz, and Alternative",
+        author: "HarriotD"
+    },
+    {
+        content: "I also like Red, Green, and Pink",
+        author: "BriMugg"
+    },
+    {
+        content: "I also like Action, Crime, and Horror",
+        author: "Kane"
+    },
+    {
+        content: "I also like Lions, Tigers, and Bears",
+        author: "Mr. Daly"
+    },
+    {
+        content: "I also like Steak, Shrimp, and Catfish",
+        author: "Gavra*B"
+    },
+]
