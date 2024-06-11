@@ -2,6 +2,7 @@ const User = require('../models/User');
 
 module.exports = {
   createUser,
+  getUsers
 };
 
 async function createUser(req, res) {
