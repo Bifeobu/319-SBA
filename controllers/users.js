@@ -26,3 +26,14 @@ async function getUsers(req, res) {
     res.status(400).send(err);
   }
 }
+
+//get request function for single user by ID
+async function getUser(req, res) {
+  try {
+    const user = await user.findById(req.params.id).exec()
+
+    res.status(200).json(users);
+  } catch (err) {
+    res.status(400).send(error);
+  }
+}
