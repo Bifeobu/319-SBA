@@ -16,7 +16,7 @@ router.post('/comment', usersCtrl.createComment);
 router.get('/', usersCtrl.getUsers);
 
 //post GET route
-// router.get('/post', usersCtrl.getPosts);
+router.get('/post', usersCtrl.getPosts);
 
 //comment GET route
 // router.get('/comment', usersCtrl.getComments);
