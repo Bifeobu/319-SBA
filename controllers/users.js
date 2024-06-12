@@ -4,6 +4,7 @@ const Comment = require('../models/Comment');
 
 module.exports = {
   createUser,
+  createPost,
   getUsers,
   getUser,
   patchUser,
@@ -16,6 +17,17 @@ async function createUser(req, res) {
     const user = await User.create(req.body);
 
     res.status(200).json(user);
+  } catch (err) {
+    res.status(400).json('No Beuno:(');
+  }
+}
+
+//post request function for post
+async function createPost(req, res) {
+  try {
+    const post = await Post.create(req.body);
+
+    res.status(200).json(post);
   } catch (err) {
     res.status(400).json('No Beuno:(');
   }

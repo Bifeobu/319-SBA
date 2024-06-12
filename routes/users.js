@@ -19,7 +19,7 @@ router.get('/', usersCtrl.getUsers);
 // router.get('/post', usersCtrl.getPosts);
 
 //comment GET route
-// router.get('/comment', usersCtrl.getComment);
+// router.get('/comment', usersCtrl.getComments);
 
 //user GET route by ID
 router.get('/:id', usersCtrl.getUser);
