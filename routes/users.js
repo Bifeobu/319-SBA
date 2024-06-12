@@ -10,7 +10,7 @@ router.post('/', usersCtrl.createUser);
 router.post('/post', usersCtrl.createPost);
 
 //comment POST route
-// router.post('/comment', usersCtrl.createComment);
+router.post('/comment', usersCtrl.createComment);
 
 //users GET route
 router.get('/', usersCtrl.getUsers);
