@@ -6,8 +6,20 @@ const router = Router();
 //user POST route
 router.post('/', usersCtrl.createUser);
 
+//post POST route
+router.post('/post', usersCtrl.createPost);
+
+//comment POST route
+// router.post('/comment', usersCtrl.createComment);
+
 //users GET route
 router.get('/', usersCtrl.getUsers);
+
+//post GET route
+// router.get('/post', usersCtrl.getPosts);
+
+//comment GET route
+// router.get('/comment', usersCtrl.getComment);
 
 //user GET route by ID
 router.get('/:id', usersCtrl.getUser);
