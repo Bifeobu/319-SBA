@@ -7,6 +7,7 @@ module.exports = {
   createPost,
   createComment,
   getUsers,
+  getPosts,
   getUser,
   patchUser,
   deleteUser
@@ -55,6 +56,19 @@ async function getUsers(req, res) {
     res.status(400).send(err);
   }
 }
+
+//get request function for posts
+async function getPosts(req, res) {
+  try {
+    const posts = await Post.find({});
+
+    res.status(200).json(posts);
+  } catch (err) {
+    res.status(400).send(err);
+  }
+}
+
+//get request function for comments
 
 //get request function for single user by ID
 async function getUser(req, res) {
