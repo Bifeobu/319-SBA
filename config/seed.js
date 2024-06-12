@@ -172,3 +172,7 @@ async function seed() {
   }
   
   seed();
+
+
+
+  //*NOTE TO SELF* Use "node config/seed.js" to run this seed file//
